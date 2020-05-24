@@ -1,0 +1,24 @@
+{
+  "root_ca" : {
+    "folder": "certificates",
+    "cert_filename": "root_ca_cert.pem",
+    "key_filename": "root_ca_key.pem",
+    "country": "US",
+    "state": "Colorado",
+    "locality": "Colorado Springs",
+    "org_name": "US Air Force",
+    "org_unit_name": "Stargate Command",
+    "common_name": "SGC Certificate Authority"
+  },
+    "subject" : {
+    "folder": "certificates",
+    "cert_filename": "subject_cert.pem",
+    "key_filename": "subject_key.pem",
+    "country": "US",
+    "state": "Colorado",
+    "locality": "Colorado Springs",
+    "org_name": "US Air Force",
+    "org_unit_name": "Stargate Command",
+    "common_name": "SG1"
+  }
+}
