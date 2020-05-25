@@ -16,8 +16,10 @@ def verify(certificate_file, algorithm, signature, string_to_sign):
         signing_bytes = string_to_sign.encode()
         certificate = crypto.load_certificate(crypto.FILETYPE_PEM, open(certificate_file).read())
         verification = crypto.verify(certificate, base64.b64decode(signature), signing_bytes, algorithm)
+        if verification is None:
+            verification = "Verification passed"
+
     except crypto.Error:
         verification = "Verification failed"
     finally:
-        if verification is None: verification = "Verification passed"
         return verification
